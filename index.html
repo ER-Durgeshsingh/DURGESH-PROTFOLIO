@@ -142,6 +142,84 @@
         }
         .nav-cta:hover { background: var(--accent); color: white; }
 
+        /* Timeline / Journey Section */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 40px 0;
+    padding-left: 30px;
+    border-left: 1px solid var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -35.5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--accent);
+}
+
+.timeline-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.timeline-content p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* GitHub Stats Styling */
+.github-stats-container {
+    margin-top: 80px;
+    padding: 40px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stats-grid img {
+    height: 170px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.stats-grid img:hover {
+    transform: translateY(-5px);
+}
+
+        
         /* Hero */
         #hero {
             min-height: 100vh;
@@ -342,6 +420,26 @@
             border: 1px solid var(--border); border-radius: 4px;
             color: var(--muted); letter-spacing: 0.05em;
         }
+        .btn-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-resume:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+}
 
         /* PROJECTS */
         .projects-layout { display: flex; flex-direction: column; gap: 3px; }
@@ -813,7 +911,9 @@
             <a href="#skills" data-num="01">Skills</a>
             <a href="#projects" data-num="02">Projects</a>
             <a href="#certifications" data-num="03">Certs</a>
-            <a href="#contact" data-num="04">Contact</a>
+            <a href="#journey" data-num="04">Journey</a>
+            <a href="#contact" data-num="05">Contact</a>
+            
         </div>
         <a href="mailto:durgeshsingh23032002@gmail.com" class="nav-cta">Hire Me ↗</a>
     </nav>
@@ -854,6 +954,13 @@
             <div class="scroll-line"></div>
             <span style="writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.2em; font-size: 0.6rem;">SCROLL</span>
         </div>
+
+           <!-- yaha pr APNA CV UPLODE KR SAKRTE HAI -->
+
+        <a href="DurgeshwarkumarSingh.pdf" download class="btn-resume">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+    <span>Download CV</span>
+</a>
 
         <!-- Profile Photo -->
         <div class="hero-photo-glow"></div>
@@ -957,6 +1064,7 @@
         </div>
     </section>
 
+    
     <!-- Projects -->
     <section id="projects">
         <div class="section-header reveal">
@@ -1096,109 +1204,6 @@
                 <div class="project-arrow">↗</div>
             </a>
         </div>
-
-         <!-- Project 4: Neural Style Transfer Phase 1 -->
-            <div class="project-row reveal" style="cursor:default; opacity:0.75;">
-                <div class="project-num">004</div>
-                <div>
-                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
-                        <div class="project-name">Neural Style Transfer with AdaIN</div>
-                       
-                        <span style="font-family:'JetBrains Mono',monospace; font-size:0.55rem; background:rgba(245,158,11,0.1); color:var(--gold); border:1px solid rgba(245,158,11,0.25); padding:3px 10px; border-radius:20px;">COOMING SOON</span>
-                    </div>
-                    <p class="project-desc">Artistic style transfer using Adaptive Instance Normalization. Transforms any image into a chosen artistic style in real-time.</p>
-                    <div class="project-stack" style="margin-top:16px;">
-                        <span class="stack-tag stack-tag-blue">Python</span>
-                        <span class="stack-tag stack-tag-purple">Deep Learning</span>
-                        <span class="stack-tag stack-tag-cyan">PyTorch</span>
-                        <span class="stack-tag stack-tag-green">Computer Vision</span>
-                        <span class="stack-tag stack-tag-orange">Video Processing</span>
-                    </div>
-                </div>
-                <div style="font-size:1.2rem;">🎨</div>
-            </div>
-
-                        <!-- Project 5: Real-time AI Gym Trainer Phase 1 -->
-            <div class="project-row reveal reveal-delay-2" style="cursor:default; opacity:0.75;">
-                <div class="project-num">005</div>
-                <div>
-                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
-                        <div class="project-name">Real-time AI Gym Trainer</div>
-                        <span style="font-family:'JetBrains Mono',monospace; font-size:0.55rem; background:rgba(16,185,129,0.15); color:#34d399; border:1px solid rgba(16,185,129,0.3); padding:3px 10px; border-radius:20px; letter-spacing:0.1em;">COME</span>
-                        <span style="font-family:'JetBrains Mono',monospace; font-size:0.55rem; background:rgba(245,158,11,0.1); color:var(--gold); border:1px solid rgba(245,158,11,0.25); padding:3px 10px; border-radius:20px;">SOON</span>
-                    </div>
-                    <p class="project-desc">AI-powered personal gym trainer using pose estimation to detect workout form in real-time via webcam. Counts reps and corrects posture.</p>
-                    <div class="project-stack" style="margin-top:16px;">
-                        <span class="stack-tag stack-tag-blue">Python</span>
-                        <span class="stack-tag stack-tag-green">MediaPipe</span>
-                        <span class="stack-tag stack-tag-cyan">OpenCV</span>
-                        <span class="stack-tag stack-tag-purple">ML Models</span>
-                        <span class="stack-tag stack-tag-cyan">Analytics</span>
-                        <span class="stack-tag stack-tag-orange">Streamlit</span>
-                    </div>
-                </div>
-                <div style="font-size:1.2rem;">💪</div>
-            </div>
-
-            
-            <!-- Project 8: AI Resume ATS System -->
-            <div class="project-row reveal reveal-delay-1" style="cursor:default; opacity:0.75;">
-                <div class="project-num">006</div>
-                <div>
-                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
-                        <div class="project-name">AI Resume ATS System</div>
-                        <span style="font-family:'JetBrains Mono',monospace; font-size:0.55rem; background:rgba(245,158,11,0.1); color:var(--gold); border:1px solid rgba(245,158,11,0.25); padding:3px 10px; border-radius:20px;">COMING SOON</span>
-                    </div>
-                    <p class="project-desc">Intelligent ATS (Applicant Tracking System) that scores and optimizes resumes against job descriptions using NLP and keyword matching.</p>
-                    <div class="project-stack" style="margin-top:16px;">
-                        <span class="stack-tag stack-tag-blue">Python</span>
-                        <span class="stack-tag stack-tag-purple">NLP</span>
-                        <span class="stack-tag stack-tag-green">Streamlit</span>
-                        <span class="stack-tag stack-tag-cyan">spaCy</span>
-                    </div>
-                </div>
-                <div style="font-size:1.2rem;">📄</div>
-            </div>
-
-            <!-- Project 9: Docker -->
-            <div class="project-row reveal reveal-delay-2" style="cursor:default; opacity:0.75;">
-                <div class="project-num">007</div>
-                <div>
-                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
-                        <div class="project-name">Docker</div>
-                        <span style="font-family:'JetBrains Mono',monospace; font-size:0.55rem; background:rgba(245,158,11,0.1); color:var(--gold); border:1px solid rgba(245,158,11,0.25); padding:3px 10px; border-radius:20px;">SOON</span>
-                    </div>
-                    <p class="project-desc">Containerization project — building, deploying and managing scalable applications using Docker containers and compose workflows.</p>
-                    <div class="project-stack" style="margin-top:16px;">
-                        <span class="stack-tag stack-tag-cyan">Docker</span>
-                        <span class="stack-tag stack-tag-blue">Containerization</span>
-                        <span class="stack-tag stack-tag-green">DevOps</span>
-                        <span class="stack-tag stack-tag-orange">CI/CD</span>
-                    </div>
-                </div>
-                <div style="font-size:1.2rem;">🐳</div>
-            </div>
-
-            <!-- Project 10: Kubernetes -->
-            <div class="project-row reveal" style="cursor:default; opacity:0.75;">
-                <div class="project-num">008</div>
-                <div>
-                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
-                        <div class="project-name">Kubernetes</div>
-                        <span style="font-family:'JetBrains Mono',monospace; font-size:0.55rem; background:rgba(245,158,11,0.1); color:var(--gold); border:1px solid rgba(245,158,11,0.25); padding:3px 10px; border-radius:20px;">SOON</span>
-                    </div>
-                    <p class="project-desc">Orchestrating containerized applications at scale with Kubernetes — cluster management, auto-scaling, and load balancing.</p>
-                    <div class="project-stack" style="margin-top:16px;">
-                        <span class="stack-tag stack-tag-blue">Kubernetes</span>
-                        <span class="stack-tag stack-tag-cyan">Docker</span>
-                        <span class="stack-tag stack-tag-green">DevOps</span>
-                        <span class="stack-tag stack-tag-purple">Cloud</span>
-                    </div>
-                </div>
-                <div style="font-size:1.2rem;">☸️</div>
-            </div>
-
-        </div>
     </section>
 
     <!-- Certifications -->
@@ -1215,6 +1220,30 @@
                 <div class="cert-name">Data Science & Machine Learning</div>
                 <p class="cert-desc">Deep Learning, Algorithms, and Python for Data Science workflows.</p>
             </div>
+             <div class="cert-card reveal">
+                <span class="cert-badge" style="background:rgba(59,130,246,0.1);color:#60a5fa;border:1px solid rgba(59,130,246,0.2);">AI/ML Job Preparation</span>
+                <div style="font-size:2rem;margin-bottom:16px;">🏛️</div>
+                <div class="cert-provider">Apna Collage</div>
+                <div class="cert-name">Prime 1.0 : Complete AI/ML Job Preparation!</div>
+                <div class="skill-tags" style="margin-top: 15px;">
+    <span class="skill-tag">Deep Learning</span>
+    <span class="skill-tag">GenAI & RAG</span>
+    <span class="skill-tag">PyTorch</span>
+    <span class="skill-tag">Transformers</span>
+    <span class="skill-tag">MLOps (Docker/K8s)</span>
+</div>
+
+<!-- <ul style="font-size: 0.75rem; color: var(--muted); line-height: 1.5; margin-top: 15px; padding-left: 15px; text-align: left;">
+    <li>• <b>Advanced DL:</b> CNN, RNN, LSTM & GANs architecture.</li>
+    <li>• <b>GenAI Stack:</b> LLMs, RAG, Agentic AI & OpenAI APIs.</li>
+    <li>• <b>Maths for AI:</b> Linear Algebra, Calculus & Statistics.</li>
+    <li>• <b>Engineering:</b> Flask, SQL, Docker & Kubernetes.</li>
+</ul> -->
+                <p class="cert-desc"> Deep Learning, Algorithms, and Python for Data Science workflows.</p>
+            </div>
+
+
+
             <div class="cert-card reveal reveal-delay-1">
                 <span class="cert-badge" style="background:rgba(239,68,68,0.1);color:#f87171;border:1px solid rgba(239,68,68,0.2);">FOSSEE · IIT-B</span>
                 <div style="font-size:2rem;margin-bottom:16px;">🏛️</div>
@@ -1248,6 +1277,67 @@
         </div>
     </section>
 
+
+    <!-- Journey & Open Source -->
+    <section id="journey">
+    <div class="section-header reveal">
+        <div class="section-num">04 —</div> 
+        <h2 class="section-title">Academic <em>Journey</em></h2>
+    </div>
+
+    <div class="timeline reveal reveal-delay-1">
+        <div class="timeline-item">
+            <div class="timeline-date">2026 — PRESENT</div>
+            <div class="timeline-content">
+                <h3>Specializing in AI/ML</h3>
+                <p>Focusing on Computer Vision and Deep Learning. Currently building real-time posture correction systems and generative art tools.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">APRIL 2026</div>
+            <div class="timeline-content">
+                <h3 style="background: linear-gradient(90deg, var(--gold), #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🏆 University Excellence Award</h3>
+                <p>Secured 1st Prize for developing an AI Smart Attendance System. Recognized for innovation in blending sound and facial recognition at Guru Kashi University.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+                <h3>B.Tech CSE @ GKU</h3>
+                <p>Started the journey in Computer Science & Engineering. Building a strong foundation in Data Structures, Java Programming, and Database Management.</p>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+        <!-- GitHub Activity Section -->
+        <div class="github-stats-container reveal reveal-delay-2">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase;">
+        Open Source Activity
+    </div>
+    <div class="stats-grid">
+        <img src="https://github-readme-stats.vercel.app/api?username=ER-Durgeshsingh&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0c1120" 
+             alt="GitHub Stats" 
+             onerror="this.style.display='none'">
+        
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ER-Durgeshsingh&layout=compact&theme=tokyonight&hide_border=true&bg_color=0c1120" 
+             alt="Top Languages" 
+             onerror="this.style.display='none'">
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <a href="https://github.com/ER-Durgeshsingh" target="_blank" class="nav-cta" style="font-size: 0.6rem;">Visit My GitHub Profile ↗</a>
+    </div>
+
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--muted); margin-top: 25px; opacity: 0.6;">
+        * Real-time data fetched from GitHub API
+    </p>
+</div>
+    </section>
+
     <!-- Contact -->
     <section id="contact">
         <div class="contact-grid">
@@ -1255,7 +1345,7 @@
                 <div class="availability-badge"><span class="status-dot"></span> Currently Available</div>
                 <div class="contact-tagline">Let's Build <em style="font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Something</em><br>Together.</div>
                 <p class="contact-text">Open to internships, freelance collaborations, and exciting projects. Let's turn your ideas into reality.</p>
-                <div style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--muted); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px;">04 — Contact</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--muted); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px;">05 — Contact</div>
             </div>
             <div class="contact-links reveal reveal-delay-1">
                 <a href="https://www.linkedin.com/in/durgeshwarkumarsingh/" target="_blank" class="contact-link">
